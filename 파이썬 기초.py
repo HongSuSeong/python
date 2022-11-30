@@ -1,3 +1,4 @@
+"""
 # 정수형
 a = 1000 # 양의 정수
 
@@ -79,12 +80,12 @@ a[1:4] # 두번째부터 네번째원소까지
 # 리스트 컴프리헨션
 array = [i for i in range(20) if i % 2 == 1]
 
-""" 아래 내용이 위와 같다.
+아래 내용이 위와 같다.
 array = []
 for i in range(20):
     if i % 2 == 1:
         array.append(i)
-"""
+
 
 # 1부터 9까지 제곱 값을 포함하는 리스트
 array = [i * i for i in range(1,10)]
@@ -103,7 +104,7 @@ array = [[0] * m] * n
 array[1][1] = 5
 # [[0, 5, 0, 0], [0, 5, 0, 0], [0, 5, 0, 0]]
 
-"""
+
 리스트 관련 메서드
 ## : 자주 사용
 ## append 삽입
@@ -112,7 +113,7 @@ array[1][1] = 5
 sort 오름차순 정렬 sort(reverse=True) 내림차순 정렬
 reverse 모든 순서를 뒤집는다
 count 특정한 값을 가지는 데이터 개수 count(3) 값이 3인 데이터 개수
-"""
+
 # remove를 여러개 하고 싶을때
 a = [1,2,3,4,5,5,5]
 remove_set = {3,5}
@@ -204,7 +205,7 @@ else:
 print("프로그램을 종료합니다.")
 
 # 비교연산자
-"""
+
 x == y
 x != y
 x > y
@@ -212,25 +213,24 @@ x < y
 x >= y
 x <= y
 
-"""
+
 
 # 논리 연산자
 
-"""
+
 x and y
 x or y
 not x
 
-"""
+
 
 
 # 기타 연산자
 
-"""
+
 x in 리스트
 x not in 문자열
 
-"""
 
 # 조건문 아무것도 처리하고 싶지 않을때 pass
 score = 85
@@ -304,7 +304,65 @@ for i in range(5):
         print(i+1, "번 학생은 합격입니다.")
 
 # 구구단
+
 for i in range(2, 10):
     for j in range(1, 10):
         print(i, "x",j,"=",i*j)
     print()
+
+# 함수
+def add(a,b):
+    return a + b
+add(3,5)
+
+def add(a,b):
+    print('함수의 결과',a + b)
+add(3,5)
+add(b=4, a=3)
+
+# 글로벌 변수
+a = 0
+
+def func():
+    global a
+    a += 1
+
+for i in range(10):
+    func()
+
+print(a)
+
+# 람다 표현식
+print((lambda a, b: a + b)(3, 7))
+
+# 입출력
+n = int(input()) # 단 건
+data = list(map(int, input().split())) # 여러 건
+data.sort(reverse = True)
+print(data)
+
+n,m,k = map(int, input().split())
+
+print(n,m,k)
+
+import sys
+data = sys.stdin.readline().rstrip()
+
+
+
+a = 1
+b = 2
+print(a, b)
+print(a)
+print(b)
+
+answer = 7
+print("정답은 " + str(answer) + "입니다.")
+
+answer = 7
+print("정답은", str(answer), "입니다.")
+
+answer = 7
+print(f"정답은 {answer}입니다.")
+
+"""
