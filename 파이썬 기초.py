@@ -393,7 +393,37 @@ print(result)
 # 람다식을 이용한 정렬
 result = sorted([('홍길동',35),('이순신',75),('아무개',50),('강슬기',29)], key = lambda x: x[1], reverse = True)
 print(result)
-"""
+
 data = [9,1,8,5,4]
 data.sort()
 print(data)
+
+라이브러리
+
+# itertools  반복되는 데이터를 처리하는 기능
+from itertools import permutations
+data = ['A', 'B', 'C']
+result = list(permutations(data, 3))
+print(result)
+
+# combinations
+from itertools import combinations
+data = ['A', 'B', 'C']
+result = list(combinations(data,2))
+print(result)
+
+
+# product
+from itertools import product
+data = ['A', 'B', 'C']
+result = list(product(data,repeat=3))
+print(result)
+
+
+
+from itertools import combinations_with_replacement
+data = ['A', 'B', 'C']
+result = list(combinations_with_replacement(data,2))
+print(result)
+
+"""
